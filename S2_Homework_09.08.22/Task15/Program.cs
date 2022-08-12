@@ -5,12 +5,12 @@
 // 1 -> нет
 
 Console.WriteLine("Введите число дня недели: ");
-int den_nedeli = Convert.ToInt32(Console.ReadLine());
+int dennedeli = Convert.ToInt32(Console.ReadLine());
 while (true)
 {
-	if (den_nedeli > 0 && den_nedeli < 8)
+	if (dennedeli > 0 && dennedeli < 8)
 	{
-		if (den_nedeli == 6 || den_nedeli == 7)
+		if (dennedeli == 6 || dennedeli == 7)
 		{
 			Console.WriteLine("Ура, выходной!");
 			break;
@@ -24,7 +24,7 @@ while (true)
 	else
 	{
 		Console.Write("Ошибка. Введите число дня недели от 1 до 7: ");
-		den_nedeli = Convert.ToInt32(Console.ReadLine());
+		dennedeli = Convert.ToInt32(Console.ReadLine());
 	}
 }
 
