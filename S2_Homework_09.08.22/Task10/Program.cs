@@ -4,7 +4,11 @@
 // 782 -> 8
 // 918 -> 1
 
-int num = new Random().Next(99, 1000);
-Console.WriteLine("Трехзначное число: " + num);
-num = num / 10;
-Console.WriteLine($"Вторая цифра числа: " + num % 10);
+Console.WriteLine("Введите трехзначное число: ");
+int num = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+if (num <99 || num > 999) Console.WriteLine("Ошибка. Некорректные данные");
+else
+{
+	num = num / 10;
+	Console.WriteLine($"Вторая цифра числа: " + num % 10);
+}
