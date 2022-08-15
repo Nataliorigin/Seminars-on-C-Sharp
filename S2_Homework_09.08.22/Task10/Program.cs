@@ -12,3 +12,4 @@ else
 	num = num / 10;
 	Console.WriteLine($"Вторая цифра числа: " + num % 10);
 }
+
