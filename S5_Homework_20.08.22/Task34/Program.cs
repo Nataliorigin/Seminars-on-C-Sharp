@@ -3,13 +3,15 @@
 
 // [345, 897, 568, 234] -> 2
 
-void MasRandom(int[] array) //Метод для: Создаем массив с рандомными трехзначными положительными числами
-{	
-	Random rmd = new Random();
-		for (int i = 0; i < array.Length; i++)
+int[] MasRandom(int size, int min, int max) //Метод для: Создаем массив с рандомными трехзначными положительными числами
+{
+	int[] array = new int[size];
+	Random rnd = new Random();
+	for (int i = 0; i < size; i++)
 	{
-		array[i] = rmd.Next(100, 1000);
+		array[i] = rnd.Next(min, max + 1);
 	}
+	return array;
 }
 
 void PrintArray(int[] array)  //Метод для: Выводим массив в консоль
@@ -37,8 +39,7 @@ int EvenElem(int[] randomArray) //Метод для: Подсчет количе
 	return count;
 }
 
-int [] newarray = new int[7];
-MasRandom(newarray);
+int [] newarray = MasRandom(4, 100, 999);
 Console.Write($"Количество четных элементов в массиве ");
 PrintArray(newarray);
 Console.Write($"Ответ: {EvenElem(newarray)}.");

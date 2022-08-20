@@ -3,14 +3,17 @@
 
 // [3.5, 7.1, 22.9, 2.3, 78.5] -> 76.2
 System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
-void MasRandom(double[] array) //Метод для: Создаем массив вещественных чисел
+double[] MasRandom(int size, int min, int max) //Метод для: Создаем массив вещественных чисел
 {
+	double[] array = new double[size];
 	Random rmd = new Random();
 	for (int i = 0; i < array.Length; i++)
 	{
-		array[i] = Math.Round(rmd.NextDouble() * 50, 1, MidpointRounding.ToZero);
+		array[i] = Math.Round(rmd.Next(min, max + 1) + rmd.NextDouble(), 1, MidpointRounding.ToZero);
 	}
+	return array;
 }
+
 void PrintArray(double[] array)  //Метод для: Выводим массив в консоль
 {
 	Console.Write("[");
@@ -22,6 +25,7 @@ void PrintArray(double[] array)  //Метод для: Выводим масси�
 	Console.Write("]");
 	Console.WriteLine();
 }
+
 double DifferenceMinMax(double[] array) //Метод для: Разница между максимальным и минимальным числом
 {
 	double min = array[0];
@@ -40,8 +44,7 @@ double DifferenceMinMax(double[] array) //Метод для: Разница ме
 	}
 	return Math.Round(max - min, 1, MidpointRounding.ToZero);
 }
-double[] newarray = new double[5];
-MasRandom(newarray);
+double[] newarray = MasRandom(5, 1, 99);
 Console.Write($"Случайный массив вещественных чисел: ");
 PrintArray(newarray);
-Console.Write($"Разница между максимальным и минимальным числом массива: {DifferenceMinMax(newarray)}.");
+Console.Write($"Разница между максимальным и минимальным числом массива: {DifferenceMinMax(newarray)}");

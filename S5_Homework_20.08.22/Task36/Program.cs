@@ -3,13 +3,15 @@
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6]-> 0
 
-void MasRandom(int[] array) //Метод для: Создаем массив с рандомными двухзначными положительными числами
+int[] MasRandom(int size, int min, int max) //Метод для: Создаем массив с рандомными трехзначными положительными числами
 {
-	Random rmd = new Random();
-	for (int i = 0; i < array.Length; i++)
+	int[] array = new int[size];
+	Random rnd = new Random();
+	for (int i = 0; i < size; i++)
 	{
-		array[i] = rmd.Next(-10, 100);
+		array[i] = rnd.Next(min, max + 1);
 	}
+	return array;
 }
 void PrintArray(int[] array)  //Метод для: Выводим массив в консоль
 {
@@ -32,8 +34,7 @@ int SumГnevenElem(int[] array) //Метод для: Сумма чисел на 
 	}
 	return sumEl;
 }
-int[] newarray = new int[5];
-MasRandom(newarray);
+int[] newarray = MasRandom(4, -10, 99);
 Console.Write($"Массив: ");
 PrintArray(newarray);
 Console.Write($"Сумма чисел на нечетных позициях: {SumГnevenElem(newarray)}.");
