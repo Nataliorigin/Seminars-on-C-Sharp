@@ -22,10 +22,10 @@ double num4 = Convert.ToInt32(Console.ReadLine());
 
 void IntersectionPoint(double b1, double k1, double b2, double k2)
 {
-	double x1 = default;
-	double y1 = default;
 	if (k1 != k2)
 	{
+		double x1 = default;
+		double y1 = default;
 		x1 = (b1 - b2) / -(k1 - k2);
 		y1 = k2 * x1 + b2;
 		Console.Write($"({x1};{y1})");
@@ -34,4 +34,4 @@ void IntersectionPoint(double b1, double k1, double b2, double k2)
 }
 
 IntersectionPoint(num1, num2, num3, num4);
-	
+
