@@ -5,7 +5,7 @@
 
 Console.Write("Введите количество чисел: ");
 int count = Convert.ToInt32(Console.ReadLine());
-void EnterNumb(int counter)
+void EnterNumbAndAboveZero(int counter)
 {
 	int sum = default;
 	int num = default;
@@ -18,4 +18,4 @@ void EnterNumb(int counter)
 	Console.WriteLine("Количество чисел больше нуля равно " + sum);
 }
 
-EnterNumb(count);
+EnterNumbAndAboveZero(count);
