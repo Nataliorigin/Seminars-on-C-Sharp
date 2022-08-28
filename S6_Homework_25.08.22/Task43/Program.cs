@@ -10,13 +10,13 @@
 // имеет бесконечное множество решений, то прямые совпадают;
 // не имеет решений, то прямые не пересекаются (прямые параллельны между собой) 
 
-Console.Write("Введите точку b1: ");
+Console.Write("Введите значение b1: ");
 double num1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите точку k1: ");
+Console.Write("Введите значение k1: ");
 double num2 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите точку b2: ");
+Console.Write("Введите значение b2: ");
 double num3 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите точку k2: ");
+Console.Write("Введите значение k2: ");
 double num4 = Convert.ToInt32(Console.ReadLine());
 
 
@@ -28,7 +28,7 @@ void IntersectionPoint(double b1, double k1, double b2, double k2)
 		double y1 = default;
 		x1 = (b1 - b2) / -(k1 - k2);
 		y1 = k2 * x1 + b2;
-		Console.Write($"({x1};{y1})");
+		Console.Write($"({Math.Round(x1, 2, MidpointRounding.ToZero)}; {Math.Round(y1, 2, MidpointRounding.ToZero)})");
 	}
 	else Console.Write("Прямые не пересекаются либо имеют множество значений");
 }
