@@ -33,10 +33,11 @@ void PrintMatrix(int[,] matrix)
 	}
 }
 void FindElementByPosition(int[,] matrix)
-{	Console.WriteLine("Введите индекс строки: ");
+{
+	Console.WriteLine("Введите индекс строки: ");
 	int x = Convert.ToInt32(Console.ReadLine());
 	Console.WriteLine("Введите индекс столбца: ");
-	 int y = Convert.ToInt32(Console.ReadLine());
+	int y = Convert.ToInt32(Console.ReadLine());
 	if (x < matrix.GetLength(0) && y < matrix.GetLength(1))
 	{
 		for (int i = 0; i < matrix.GetLength(0); i++) // строки

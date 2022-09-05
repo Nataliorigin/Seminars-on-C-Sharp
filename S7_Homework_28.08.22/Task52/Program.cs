@@ -58,7 +58,7 @@ double[] AverageColumn(int[,] matrix)
 			sum += matrix[i, j];
 		}
 		arr[j] = Math.Round(sum / сolLength, 2, MidpointRounding.ToZero);
-		sum = default;
+		
 	}
 	return arr;
 }
